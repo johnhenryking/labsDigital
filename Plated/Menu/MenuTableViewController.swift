@@ -106,7 +106,7 @@ extension MenuTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let recents = UIStoryboard(name: "Recents", bundle: nil).instantiateInitialViewController() as? RecentsTableViewController
-        recents?.navigationItem.setTitleView(#imageLiteral(resourceName: "plated-80"))
+        recents?.navigationItem.setTitleView()
         recents?.requestType = .indiviual
         let recipe = self.menus[indexPath.section].recipes![indexPath.item]
         recents?.recipes = [recipe]

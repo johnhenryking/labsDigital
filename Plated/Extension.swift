@@ -80,7 +80,7 @@ extension UIImageView {
 
 extension UINavigationItem {
     
-    func setTitleView(_ image: UIImage) {
+    func setTitleView() {
         
         let image = #imageLiteral(resourceName: "plated-80")
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
