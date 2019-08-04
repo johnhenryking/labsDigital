@@ -28,7 +28,9 @@ struct Menu: Decodable {
         return lhs.id == rhs.id
     }
     
-    
+    override static func primaryKey() -> String {
+        return "name"
+    }
     
 }
 
@@ -36,7 +38,7 @@ extension Recipe {
     
     internal func writeToRealm() {
         try! NetworkManager.shared.realm.write {
-            NetworkManager.shared.realm.add(self)
+            NetworkManager.shared.realm.add(self, update: .all)
             
         }
     }
