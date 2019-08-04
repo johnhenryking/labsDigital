@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ze7-cp-LIP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recents Table View Controller-->
+        <scene sceneID="Yrt-AK-5l6">
+            <objects>
+                <tableViewController id="Ze7-cp-LIP" customClass="RecentsTableViewController" customModule="Plated" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kb5-id-5Ax">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.92156862745098034" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="369" id="gXa-1q-jLo" customClass="RecentsTableViewCell" customModule="Plated" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="369"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gXa-1q-jLo" id="ozj-Eb-tXD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chicken_and_Coconut_Soup_with_Mushrooms_and_Sticky_Rice" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-r9-Kc6" customClass="CustomImageView" customModule="Plated" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="282"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="282" id="SxY-gB-zgm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5by-R9-biJ">
+                                            <rect key="frame" x="155" y="307" width="65" height="42.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="80z-xt-W9c">
+                                                    <rect key="frame" x="0.0" y="0.0" width="65" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="wk5-LH-4j8">
+                                                    <rect key="frame" x="0.0" y="28" width="65" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5by-R9-biJ" firstAttribute="top" secondItem="eSb-r9-Kc6" secondAttribute="bottom" constant="25" id="EtV-6s-ZfF"/>
+                                        <constraint firstItem="eSb-r9-Kc6" firstAttribute="centerX" secondItem="5by-R9-biJ" secondAttribute="centerX" id="MfL-A7-lvg"/>
+                                        <constraint firstItem="eSb-r9-Kc6" firstAttribute="top" secondItem="ozj-Eb-tXD" secondAttribute="top" id="a8u-FL-5tf"/>
+                                        <constraint firstAttribute="trailing" secondItem="eSb-r9-Kc6" secondAttribute="trailing" id="mR7-Av-YQd"/>
+                                        <constraint firstItem="eSb-r9-Kc6" firstAttribute="leading" secondItem="ozj-Eb-tXD" secondAttribute="leading" id="oPo-Kj-7Xb"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="wk5-LH-4j8" id="A4P-dL-Nrd"/>
+                                    <outlet property="nameLabel" destination="80z-xt-W9c" id="4ui-Sr-K7z"/>
+                                    <outlet property="recipeImageView" destination="eSb-r9-Kc6" id="onT-1w-rdk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ze7-cp-LIP" id="KAd-mm-x3e"/>
+                            <outlet property="delegate" destination="Ze7-cp-LIP" id="Scz-k6-PMQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="HwF-zZ-vKV"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZb-mo-mQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1250.4000000000001" y="198.35082458770617"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Chicken_and_Coconut_Soup_with_Mushrooms_and_Sticky_Rice" width="107.51999664306641" height="79.199996948242188"/>
+    </resources>
+</document>
