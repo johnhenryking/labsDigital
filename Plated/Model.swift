@@ -37,15 +37,16 @@ struct Menu: Decodable {
 extension Recipe {
     
     internal func writeToRealm() {
-        try! NetworkManager.shared.realm.write {
-            NetworkManager.shared.realm.add(self, update: .all)
-            
+        try? NetworkManager.shared.realm.write {
+            NetworkManager.shared.realm.add(self)
         }
+        
     }
     
     internal func deleteFromRealm() {
-        try! NetworkManager.shared.realm.write {
-            NetworkManager.shared.realm.delete(self)
+        try? NetworkManager.shared.realm.write {
+                NetworkManager.shared.realm.delete(self)
+            
         }
     }
 }

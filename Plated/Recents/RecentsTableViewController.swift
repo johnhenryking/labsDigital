@@ -65,7 +65,7 @@ extension RecentsTableViewController {
             self.recipes.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
-        if indexPath.row < recipes.count {
+        if indexPath.row < recipes.count && requestType == .recents {
             return [delete]
         }
         return []

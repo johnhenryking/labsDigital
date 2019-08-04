@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MenuTableViewController: UITableViewController {
     
@@ -107,7 +108,6 @@ extension MenuTableViewController {
         
         let recents = UIStoryboard(name: "Recents", bundle: nil).instantiateInitialViewController() as? RecentsTableViewController
         recents?.navigationItem.setTitleView()
-        recents?.requestType = .indiviual
         let recipe = self.menus[indexPath.section].recipes![indexPath.item]
         recents?.recipes = [recipe]
         recipe.writeToRealm()
